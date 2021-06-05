@@ -49,10 +49,18 @@
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 }
+.nav-links-footer {
+	color: #242222;
+	text-decoration: none;
+}
 
 .nav-links:hover {
 	color: #1d3f6e;
 	border-radius: 4px;
+	transition: all 0.2s ease-out;
+}
+.nav-links-footer:hover {
+	color: lightskyblue;
 	transition: all 0.2s ease-out;
 }
 
