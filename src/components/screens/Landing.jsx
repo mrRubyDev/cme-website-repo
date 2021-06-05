@@ -3,6 +3,7 @@ import Banner from "../banner/Banner";
 import PasosLanding from "../landing/PasosLanding";
 import TextImg from "../landing/TextImg";
 import Medico from "../../images/doctor-woman.jpeg";
+import Footer from "../Footer";
 
 export default function Landing() {
 	return (
@@ -45,6 +46,7 @@ export default function Landing() {
 					line2="Los mejores precios"
 				/>
 			</div>
+			<Footer />
 		</div>
 	);
 }
