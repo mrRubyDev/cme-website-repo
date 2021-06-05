@@ -1,0 +1,13 @@
+.reservar-container {
+	display: flex;
+	width: 100%;
+	margin-top: 2rem;
+	align-items: center;
+	flex-direction: column;
+}
+
+.principales-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
