@@ -1,10 +1,6 @@
 import React from "react";
 import Preferencial from "../../images/cliente-preferencial.png";
-import {
-	blueParagraphStyleLeft,
-	buttonBlue,
-	darkBlue,
-} from "../../config/styles";
+import { blueParagraphStyleLeft, darkBlue } from "../../config/styles";
 import { Button } from "../Button";
 import paths from "../../navigation/paths";
 

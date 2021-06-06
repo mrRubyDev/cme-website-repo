@@ -9,14 +9,21 @@ import MenuItem from "./MenuItem";
 function Navbar() {
 	const headerElements = [
 		{ name: "Inicio", path: paths.Landing, insideElements: [] },
-		{ name: "COVID-19", path: paths.Servicios.Covid, insideElements: [] },
+		{
+			name: "COVID-19",
+			path: paths.Servicios.Covid,
+			insideElements: [],
+		},
 		{ name: "Nosotros", path: paths.AboutUs, insideElements: [] },
 		{
 			name: "Servicios",
 			path: paths.Servicios.base,
 			insideElements: [
 				{ name: "Covid", path: paths.Servicios.Covid },
-				{ name: "Carnet de Salud Laboral", path: paths.Servicios.Carnet_salud },
+				{
+					name: "Carnet de Salud Laboral",
+					path: paths.Servicios.Carnet_salud,
+				},
 				{
 					name: "Carnet de Salud para Residencia",
 					path: paths.Servicios.Carnet_salud_residencia,

@@ -1,11 +1,9 @@
 import React from "react";
 import "./PasosLanding.css";
-import paths from "../../navigation/paths";
 import Card from "../Styled/Card";
 import { BsSearch } from "react-icons/bs";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { AiTwotoneBulb } from "react-icons/ai";
-import { darkBlue } from "../../config/styles";
 
 const styles = {
 	icon: {

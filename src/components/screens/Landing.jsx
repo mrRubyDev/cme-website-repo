@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../banner/Banner";
 import PasosLanding from "../landing/PasosLanding";
-import TextImg from "../landing/TextImg";
+import TextImg from "../Styled/TextImg";
 import Medico from "../../images/doctor-woman.jpeg";
 import Footer from "../Footer";
 
