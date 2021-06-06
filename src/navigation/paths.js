@@ -1,6 +1,7 @@
 const paths = {
 	Landing: "/home",
 	AboutUs: "/about_us",
+	NotFound: "/not_found",
 	Servicios: {
 		base: "/servicios",
 		Covid: "/covid_test",

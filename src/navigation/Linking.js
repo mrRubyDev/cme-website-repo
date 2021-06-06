@@ -21,6 +21,7 @@ import SaludLaboral from "../components/screens/empresas/SaludLaboral";
 import Seguridad from "../components/screens/empresas/Seguridad";
 import Higiene from "../components/screens/empresas/Higiene";
 import Reservar from "../components/screens/Reservar";
+import NotFound from "../components/screens/NotFound";
 
 const prefix = Linking.makeUrl("/");
 
@@ -28,113 +29,111 @@ const linking = {
 	prefixes: [prefix],
 	config: {
 		screens: {
-			MainStack: {
-				screen: Main,
-				path: paths.Landing,
-				initialRouteName: "Landing",
-				screens: {
-					Landing: {
-						screen: Landing,
-						path: paths.Landing,
-					},
-					AboutUs: {
-						screen: AboutUs,
-						path: paths.AboutUs,
-					},
-					ServiciosStack: {
-						screen: ServiciosStack,
-						path: paths.Servicios.base,
-						initialRouteName: "ServiciosGlobal",
-						screens: {
-							Covid: {
-								screen: Covid,
-								path: paths.Servicios.Covid,
-							},
-							CarnetSalud: {
-								screen: CarnetSalud,
-								path: paths.Servicios.CarnetSalud,
-							},
-							CarnetSaludResidencia: {
-								screen: CarnetSaludResidencia,
-								path: paths.Servicios.CarnetSaludResidencia,
-							},
-							LibretaAmateur: {
-								screen: LibretaAmateur,
-								path: paths.Servicios.LibretaAmateur,
-							},
-							LibretaProfesional: {
-								screen: LibretaProfesional,
-								path: paths.Servicios.LibretaProfesional,
-							},
-							AptitudFisica: {
-								screen: AptitudFisica,
-								path: paths.Servicios.AptitudFisica,
-							},
-							Lab: {
-								screen: Lab,
-								path: paths.Servicios.Lab,
-							},
-							Ecografias: {
-								screen: Ecografias,
-								path: paths.Servicios.Ecografias,
-							},
+			screen: Main,
+			screens: {
+				Landing: {
+					screen: Landing,
+					path: paths.Landing,
+				},
+				AboutUs: {
+					screen: AboutUs,
+					path: paths.AboutUs,
+				},
+				NotFound: {
+					screen: NotFound,
+					path: paths.NotFound,
+				},
+				ServiciosStack: {
+					screen: ServiciosStack,
+					path: paths.Servicios.base,
+					screens: {
+						Covid: {
+							screen: Covid,
+							path: paths.Servicios.Covid,
+						},
+						CarnetSalud: {
+							screen: CarnetSalud,
+							path: paths.Servicios.CarnetSalud,
+						},
+						CarnetSaludResidencia: {
+							screen: CarnetSaludResidencia,
+							path: paths.Servicios.CarnetSaludResidencia,
+						},
+						LibretaAmateur: {
+							screen: LibretaAmateur,
+							path: paths.Servicios.LibretaAmateur,
+						},
+						LibretaProfesional: {
+							screen: LibretaProfesional,
+							path: paths.Servicios.LibretaProfesional,
+						},
+						AptitudFisica: {
+							screen: AptitudFisica,
+							path: paths.Servicios.AptitudFisica,
+						},
+						Lab: {
+							screen: Lab,
+							path: paths.Servicios.Lab,
+						},
+						Ecografias: {
+							screen: Ecografias,
+							path: paths.Servicios.Ecografias,
 						},
 					},
-					EspecialidadesStack: {
-						screen: EspecialidadesStack,
-						path: paths.Especialidades.base,
-						initialRouteName: "Especialidades",
-						screens: {
-							Pediatria: {
-								screen: Pediatria,
-								path: paths.Especialidades.Pediatria,
-							},
-							CarnetSalud: {
-								screen: CarnetSalud,
-								path: paths.Especialidades.Otorrinologia,
-							},
-							CarnetSaludResidencia: {
-								screen: CarnetSaludResidencia,
-								path: paths.Especialidades.Fisio,
-							},
-							LibretaAmateur: {
-								screen: LibretaAmateur,
-								path: paths.Especialidades.Linfatico,
-							},
+				},
+				EspecialidadesStack: {
+					screen: EspecialidadesStack,
+					path: paths.Especialidades.base,
+					initialRouteName: "Especialidades",
+					screens: {
+						Pediatria: {
+							screen: Pediatria,
+							path: paths.Especialidades.Pediatria,
+						},
+						CarnetSalud: {
+							screen: CarnetSalud,
+							path: paths.Especialidades.Otorrinologia,
+						},
+						CarnetSaludResidencia: {
+							screen: CarnetSaludResidencia,
+							path: paths.Especialidades.Fisio,
+						},
+						LibretaAmateur: {
+							screen: LibretaAmateur,
+							path: paths.Especialidades.Linfatico,
 						},
 					},
-
-					EmpresasStack: {
-						screen: EmpresasStack,
-						path: paths.Empresas.base,
-						initialRouteName: "Empresas",
-						screens: {
-							CarnetAltura: {
-								screen: CarnetAltura,
-								path: paths.Empresas.Carnet_altura,
-							},
-							SaludOcupacional: {
-								screen: SaludOcupacional,
-								path: paths.Empresas.Salud_ocupacional,
-							},
-							SaludLaboral: {
-								screen: SaludLaboral,
-								path: paths.Empresas.Salud_laboral,
-							},
-							Seguridad: {
-								screen: Seguridad,
-								path: paths.Empresas.Seguridad,
-							},
-							Higiene: {
-								screen: Higiene,
-								path: paths.Empresas.Higiene,
-							},
+				},
+				EmpresasStack: {
+					screen: EmpresasStack,
+					path: paths.Empresas.base,
+					initialRouteName: "Empresas",
+					screens: {
+						CarnetAltura: {
+							screen: CarnetAltura,
+							path: paths.Empresas.Carnet_altura,
+						},
+						SaludOcupacional: {
+							screen: SaludOcupacional,
+							path: paths.Empresas.Salud_ocupacional,
+						},
+						SaludLaboral: {
+							screen: SaludLaboral,
+							path: paths.Empresas.Salud_laboral,
+						},
+						Seguridad: {
+							screen: Seguridad,
+							path: paths.Empresas.Seguridad,
+						},
+						Higiene: {
+							screen: Higiene,
+							path: paths.Empresas.Higiene,
 						},
 					},
-					Reservar: {
-						screen: Reservar,
-						path: paths.Reservar,
-					},
+				},
+				Reservar: {
+					screen: Reservar,
+					path: paths.Reservar,
 				},
 			},
 		},

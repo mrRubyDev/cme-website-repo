@@ -7,18 +7,21 @@ import ServiciosStack from "./ServiciosNavigator";
 import EspecialidadesStack from "./EspecialidadesNavigator";
 import EmpresasStack from "./EmpresasNavigator";
 import Reservar from "../components/screens/Reservar";
+import NotFound from "../components/screens/NotFound";
+import linking from "./Linking";
 
 const Stack = createStackNavigator();
 
 export default function Main() {
 	return (
-		<NavigationContainer>
+		<NavigationContainer linking={linking}>
 			<Stack.Navigator
 				initialRouteName={"Landing"}
 				screenOptions={{ headerShown: false }}
 			>
 				<Stack.Screen name={"Landing"} component={Landing} />
 				<Stack.Screen name={"AboutUs"} component={AboutUs} />
+				<Stack.Screen name={"NotFound"} component={NotFound} />
 				<Stack.Screen name={"ServiciosStack"} component={ServiciosStack} />
 				<Stack.Screen
 					name={"EspecialidadesStack"}

@@ -11,6 +11,8 @@ import Address from "./components/Address";
 import Especialidades from "./components/screens/especialidades/Especialidades";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import paths from "./navigation/paths";
+import Covid from "./components/screens/servicios/Covid";
+import NotFound from "./components/screens/NotFound";
 
 function App() {
 	return (
@@ -31,6 +33,7 @@ function App() {
 							<Route path={paths.Landing} exact component={Landing} />
 							<Route path={paths.AboutUs} exact component={AboutUs} />
 							<Route path={paths.Reservar.base} exact component={Reservar} />
+							<Route path={paths.Servicios.Covid} exact component={Covid} />
 							<Route path={paths.Empresas.base} exact component={Empresas} />
 							<Route
 								path={paths.Especialidades.base}
@@ -38,6 +41,7 @@ function App() {
 								component={Especialidades}
 							/>
 							<Route path={paths.Servicios.base} exact component={Servicios} />
+							<Route path="/*" component={NotFound} />
 						</Switch>
 					</div>
 				</Router>

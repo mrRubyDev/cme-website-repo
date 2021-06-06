@@ -4,7 +4,7 @@ import {
 	buttonBlue,
 	darkBlue,
 } from "../../config/styles";
-import IconText from "../Styled/IconText";
+import IconText from "./IconText";
 import { TiTick } from "react-icons/ti";
 import { Button } from "../Button";
 import paths from "../../navigation/paths";
@@ -18,6 +18,7 @@ export default function VeintiCuatroHoras({
 	line2,
 	button,
 	img,
+	noTicks,
 }) {
 	return (
 		<div
@@ -64,8 +65,19 @@ export default function VeintiCuatroHoras({
 								marginTop: "2rem",
 							}}
 						>
-							<IconText text={line1} icon={<TiTick style={styles.icon} />} />
-							<IconText text={line2} icon={<TiTick style={styles.icon} />} />
+							{!noTicks && (
+								<>
+									<IconText
+										text={line1}
+										icon={<TiTick style={styles.icon} />}
+									/>
+									<IconText
+										text={line2}
+										icon={<TiTick style={styles.icon} />}
+									/>
+								</>
+							)}
+
 							{button ? (
 								<div style={{ marginTop: "2rem" }}>
 									<Button text={button} url={paths.Especialidades.base} />
@@ -118,8 +130,18 @@ export default function VeintiCuatroHoras({
 								marginTop: "2rem",
 							}}
 						>
-							<IconText text={line1} icon={<TiTick style={styles.icon} />} />
-							<IconText text={line2} icon={<TiTick style={styles.icon} />} />
+							{!noTicks && (
+								<>
+									<IconText
+										text={line1}
+										icon={<TiTick style={styles.icon} />}
+									/>
+									<IconText
+										text={line2}
+										icon={<TiTick style={styles.icon} />}
+									/>
+								</>
+							)}
 							{button ? (
 								<div style={{ marginTop: "2rem" }}>
 									<Button text={button} url={paths.Especialidades.base} />
