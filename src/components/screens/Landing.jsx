@@ -4,6 +4,7 @@ import PasosLanding from "../landing/PasosLanding";
 import TextImg from "../Styled/TextImg";
 import Medico from "../../images/doctor-woman.jpeg";
 import Footer from "../Footer";
+import paths from "../../navigation/paths";
 
 export default function Landing() {
 	return (
@@ -32,6 +33,7 @@ export default function Landing() {
 					line1="Los mejores especialistas"
 					line2="Las mejores especialidades"
 					button="Especialidades"
+					buttonUrl={paths.Especialidades.base}
 				/>
 			</div>
 			<div style={{ height: "25rem" }}>

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./MenuItem.css";
 import { Link } from "react-router-dom";
-import { BiChevronDown } from "react-icons/bi";
+import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 
 export default function MenuItem({ el, activeTab, handleClick }) {
 	const [displayDrop, setDisplayDrop] = useState("");
 	const handleDrop = name => {
-		if (!el.insideElements.length) handleClick(name);
+		if (!el.insideElements.length) handleClick();
 		if (displayDrop === name) {
 			setDisplayDrop("");
 		} else {
@@ -23,20 +23,18 @@ export default function MenuItem({ el, activeTab, handleClick }) {
 						className="nav-links"
 						onClick={() => handleDrop(el.name)}
 					>
-						<p className={activeTab === el.name ? "menu-text-active" : null}>
-							{el.name}
-						</p>
+						<p>{el.name}</p>
 					</Link>
 				) : (
 					<div className="menu-text" onClick={() => handleDrop(el.name)}>
-						<p className={activeTab === el.name ? "menu-text-active" : null}>
-							{el.name}
-						</p>
+						<p>{el.name}</p>
 						<p>
 							{" "}
-							<BiChevronDown
-								style={activeTab === el.name ? styles.iconActive : styles.icon}
-							/>{" "}
+							{displayDrop === el.name ? (
+								<BiChevronUp style={styles.iconActive} />
+							) : (
+								<BiChevronDown style={styles.icon} />
+							)}{" "}
 						</p>
 					</div>
 				)}

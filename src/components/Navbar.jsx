@@ -14,7 +14,7 @@ function Navbar() {
 			path: paths.Servicios.Covid,
 			insideElements: [],
 		},
-		{ name: "Nosotros", path: paths.AboutUs, insideElements: [] },
+
 		{
 			name: "Servicios",
 			path: paths.Servicios.base,
@@ -78,10 +78,11 @@ function Navbar() {
 				},
 			],
 		},
+		{ name: "Tarifas", path: paths.Tarifas, insideElements: [] },
 	];
 	const [click, setClick] = useState(false);
 
-	const handleClick = name => {
+	const handleClick = () => {
 		setClick(!click);
 	};
 	const closeMobileMenu = () => setClick(false);

@@ -4,11 +4,12 @@ import Navbar from "./components/Navbar";
 import Landing from "./components/screens/Landing";
 import Reservar from "./components/screens/Reservar";
 import AboutUs from "./components/screens/AboutUs";
-import Empresas from "./components/screens/empresas/Empresas";
-import Servicios from "./components/screens/servicios/Servicios";
+import Tarifas from "./components/screens/Tarifas";
+import { Empresas } from "./components/screens/empresas/index";
+import { Servicios } from "./components/screens/servicios/index";
 import Address from "./components/Address";
 
-import Especialidades from "./components/screens/especialidades/Especialidades";
+import { Especialidades } from "./components/screens/especialidades/index";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import paths from "./navigation/paths";
 import Covid from "./components/screens/servicios/Covid";
@@ -31,16 +32,97 @@ function App() {
 						<Switch>
 							<Route path="/" exact component={Landing} />
 							<Route path={paths.Landing} exact component={Landing} />
-							<Route path={paths.AboutUs} exact component={AboutUs} />
+							<Route path={paths.Tarifas} exact component={Tarifas} />
 							<Route path={paths.Reservar.base} exact component={Reservar} />
-							<Route path={paths.Servicios.Covid} exact component={Covid} />
-							<Route path={paths.Empresas.base} exact component={Empresas} />
+							{/* //Servicios */}
 							<Route
-								path={paths.Especialidades.base}
+								path={paths.Servicios.Covid}
 								exact
-								component={Especialidades}
+								component={Servicios.Covid}
 							/>
-							<Route path={paths.Servicios.base} exact component={Servicios} />
+							<Route
+								path={paths.Servicios.Carnet_salud}
+								exact
+								component={Servicios.CarnetSalud}
+							/>
+							<Route
+								path={paths.Servicios.Carnet_salud_residencia}
+								exact
+								component={Servicios.CarnetSaludResidencia}
+							/>
+							<Route
+								path={paths.Servicios.Libreta_amateur}
+								exact
+								component={Servicios.LibretaAmateur}
+							/>
+							<Route
+								path={paths.Servicios.Libreta_profesional}
+								exact
+								component={Servicios.LibretaProfesional}
+							/>
+							<Route
+								path={paths.Servicios.Aptitud_fisica}
+								exact
+								component={Servicios.AptitudFisica}
+							/>
+							<Route
+								path={paths.Servicios.Lab}
+								exact
+								component={Servicios.Lab}
+							/>
+							<Route
+								path={paths.Servicios.Ecografias}
+								exact
+								component={Servicios.Ecografias}
+							/>
+							{/* Empresas */}
+							<Route
+								path={paths.Empresas.Carnet_altura}
+								exact
+								component={Empresas.CarnetAltura}
+							/>
+							<Route
+								path={paths.Empresas.Salud_laboral}
+								exact
+								component={Empresas.SaludLaboral}
+							/>
+							<Route
+								path={paths.Empresas.Salud_ocupacional}
+								exact
+								component={Empresas.SaludOcupacional}
+							/>
+							<Route
+								path={paths.Empresas.Seguridad}
+								exact
+								component={Empresas.Seguridad}
+							/>
+							<Route
+								path={paths.Empresas.Higiene}
+								exact
+								component={Empresas.Higiene}
+							/>
+							{/* Especialidades */}
+							<Route
+								path={paths.Especialidades.Pediatria}
+								exact
+								component={Especialidades.Pediatria}
+							/>
+							<Route
+								path={paths.Especialidades.Otorrinologia}
+								exact
+								component={Especialidades.Otorrinologia}
+							/>
+							<Route
+								path={paths.Especialidades.Fisio}
+								exact
+								component={Especialidades.Fisio}
+							/>
+							<Route
+								path={paths.Especialidades.Linfatico}
+								exact
+								component={Especialidades.Linfatico}
+							/>
+
 							<Route path="/*" component={NotFound} />
 						</Switch>
 					</div>
