@@ -77,9 +77,30 @@ export default function Footer() {
 					}}
 				>
 					<h4 style={{ marginBottom: "1rem" }}>Legal</h4>
-					<Link className="nav-links-footer">Condiciones del Servicio</Link>
-					<Link className="nav-links-footer">Política de Privacidad</Link>
-					<Link className="nav-links-footer">Condiciones de Uso</Link>
+					<Link
+						className="nav-links-footer"
+						to={{
+							pathname: "https://www.facebook.com/cmeuruguay",
+						}}
+					>
+						Condiciones del Servicio
+					</Link>
+					<Link
+						className="nav-links-footer"
+						to={{
+							pathname: "https://www.facebook.com/cmeuruguay",
+						}}
+					>
+						Política de Privacidad
+					</Link>
+					<Link
+						className="nav-links-footer"
+						to={{
+							pathname: "https://www.facebook.com/cmeuruguay",
+						}}
+					>
+						Condiciones de Uso
+					</Link>
 				</div>
 				<div style={{ height: "80%", width: "10%", marginLeft: "2rem" }}>
 					<img src={Logo} alt="CME" style={{ height: "100%", width: "100%" }} />
