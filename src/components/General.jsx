@@ -1,11 +1,10 @@
 import React from "react";
 import TextImg from "./Styled/TextImg";
-import { blueParagraphStyle, headerStyleCenter, rose } from "../config/styles";
 import Brick from "./Styled/Brick";
 import Footer from "./Footer";
 
 export default function General({
-	textImg,
+	secondColor,
 	header,
 	header2,
 	title,
@@ -38,7 +37,7 @@ export default function General({
 				}
 			/>
 			<Brick
-				color={rose}
+				color={secondColor}
 				children={
 					<TextImg
 						paragraph={paragraph2}

@@ -26,6 +26,15 @@
 	flex-direction: row;
 	cursor: pointer;
 }
+.menu-text-active {
+	align-items: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	color: lightskyblue;
+}
 .menu-text:hover {
 	color: #1d3f6e;
 }

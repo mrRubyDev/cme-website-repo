@@ -20,13 +20,18 @@ export default function MenuItem({ el, activeTab, handleClick }) {
 				{!el.insideElements.length ? (
 					<Link
 						to={el.path}
-						className="nav-links"
+						className={"nav-links"}
 						onClick={() => handleDrop(el.name)}
 					>
 						<p>{el.name}</p>
 					</Link>
 				) : (
-					<div className="menu-text" onClick={() => handleDrop(el.name)}>
+					<div
+						className={
+							displayDrop === el.name ? "menu-text-active" : "menu-text"
+						}
+						onClick={() => handleDrop(el.name)}
+					>
 						<p>{el.name}</p>
 						<p>
 							{" "}

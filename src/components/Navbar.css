@@ -64,6 +64,11 @@
 	transition: all 0.2s ease-out;
 }
 
+.nav-links-active  {
+	color: lightskyblue;
+	transition: all 0.2s ease-out;
+}
+
 .fa-bars {
 	color: #fff;
 }

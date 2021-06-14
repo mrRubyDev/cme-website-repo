@@ -1,4 +1,5 @@
 import React from "react";
+import { rose } from "../../../config/styles";
 import General from "../../General";
 
 export default function CarnetSaludResidencia() {
@@ -14,6 +15,7 @@ export default function CarnetSaludResidencia() {
 				
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati voluptatem explicabo facilis eius quis, voluptatibus eum ex libero placeat sapiente esse, nisi officia ea. Totam consequatur iste voluptates perspiciatis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati voluptatem explicabo facilis eius quis, voluptatibus eum ex libero placeat sapiente esse, nisi officia ea. Totam consequatur iste voluptates perspiciatis?"
 				`}
+				secondColor={rose}
 			/>
 		</div>
 	);
