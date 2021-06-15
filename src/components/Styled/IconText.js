@@ -1,17 +1,27 @@
 import React from "react";
-import { blueParagraphStyle } from "../../config/styles";
+import { darkBlue } from "../../config/styles";
 
 export default function IconText({ icon, text }) {
 	return (
 		<div
 			style={{
 				display: "flex",
-				width: "60%",
+				width: "70%",
 				alignItems: "center",
+				marginBottom: ".5rem",
 			}}
 		>
 			{icon}
-			<p style={blueParagraphStyle}>{text}</p>
+			<p
+				style={{
+					width: "100%",
+					color: darkBlue,
+					fontSize: 16,
+					textAlign: "center",
+				}}
+			>
+				{text}
+			</p>
 		</div>
 	);
 }

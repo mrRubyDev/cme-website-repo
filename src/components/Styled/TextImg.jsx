@@ -7,7 +7,7 @@ import {
 import IconText from "./IconText";
 import { TiTick } from "react-icons/ti";
 import { Button } from "../Button";
-import paths from "../../navigation/paths";
+import { useIsDesktop } from "../../hooks/useMedia";
 
 export default function TextImg({
 	textImg,
@@ -17,11 +17,13 @@ export default function TextImg({
 	line1,
 	line2,
 	button,
+	color,
 	buttonUrl,
 	img,
 	centered,
 	noTicks,
 }) {
+	const isDesktop = useIsDesktop();
 	return (
 		<div
 			style={{
@@ -35,7 +37,7 @@ export default function TextImg({
 			{textImg && img && !centered && (
 				<div
 					style={{
-						width: "60%",
+						width: isDesktop ? "60%" : "80%",
 						display: "flex",
 					}}
 				>
@@ -218,11 +220,10 @@ export default function TextImg({
 			{!img && !textImg && !centered && (
 				<div
 					style={{
-						width: "70%",
+						width: "80%",
 						display: "flex",
 					}}
 				>
-					<div style={{ width: "40%", marginRight: "8rem" }}></div>
 					<div
 						style={{
 							width: "60%",
@@ -284,11 +285,14 @@ export default function TextImg({
 						display: "flex",
 						justifyContent: "center",
 						textAlign: "center",
+						height: "80vh",
+
+						backgroundColor: color,
 					}}
 				>
 					<div
 						style={{
-							width: "70%",
+							width: "90%",
 							display: "flex",
 							flexDirection: "column",
 							justifyContent: "center",
@@ -312,12 +316,15 @@ export default function TextImg({
 						>
 							{title}
 						</h2>
+
 						<p style={blueParagraphStyleLeft}> {paragraph}</p>
+
 						<div
 							style={{
 								display: "flex",
 								flexDirection: "column",
 								marginTop: "2rem",
+								alignItems: "center",
 							}}
 						>
 							{!noTicks && (
