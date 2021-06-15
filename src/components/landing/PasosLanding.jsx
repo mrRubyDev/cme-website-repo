@@ -4,6 +4,7 @@ import Card from "../Styled/Card";
 import { BsSearch } from "react-icons/bs";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { AiTwotoneBulb } from "react-icons/ai";
+import { useIsMobile, useIsTablet } from "../../hooks/useMedia";
 
 const styles = {
 	icon: {
@@ -35,12 +36,24 @@ const PASOS = [
 ];
 
 export default function ServiciosLanding() {
+	const isMobile = useIsMobile();
+	const isTablet = useIsTablet();
 	return (
 		<div className="reservar-container">
-			<h2 style={{ fontSize: 30, color: "#34313D" }}>
-				3 sencillos pasos para solucionar sus necesidades
-			</h2>
-			<div className="principales-container">
+			<div style={{ width: "90vw", textAlign: "center" }}>
+				<h2 style={{ fontSize: 30, color: "#34313D" }}>
+					3 sencillos pasos para solucionar sus necesidades
+				</h2>
+			</div>
+			<div
+				className={
+					isMobile
+						? "principales-container-mobile"
+						: isTablet
+						? "principales-container-tablet"
+						: "principales-container"
+				}
+			>
 				{PASOS.map((el, i) => (
 					<div style={{ margin: "4rem 6rem" }}>
 						<Card

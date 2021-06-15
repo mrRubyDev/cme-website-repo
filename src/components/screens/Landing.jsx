@@ -5,8 +5,12 @@ import TextImg from "../Styled/TextImg";
 import Medico from "../../images/doctor-woman.jpeg";
 import Footer from "../Footer";
 import paths from "../../navigation/paths";
+import { useIsMobile, useIsTablet, useIsDesktop } from "../../hooks/useMedia";
 
 export default function Landing() {
+	const isMobile = useIsMobile();
+	const isTablet = useIsTablet();
+	const isDesktop = useIsDesktop();
 	return (
 		<div
 			style={{
@@ -16,11 +20,23 @@ export default function Landing() {
 				alignItems: "center",
 			}}
 		>
-			<Banner />
-			<h4 style={{ fontStyle: "italic", fontSize: "25px" }}>
-				Más de 30 años de experiencia nos avalan.
-			</h4>
-			<PasosLanding />
+			<div style={{ width: "100vw", height: "80%" }}>
+				<Banner />
+			</div>
+			<div
+				style={{
+					width: "80vw",
+					textAlign: "center",
+					fontSize: isMobile ? "14px" : "20px",
+				}}
+			>
+				<h4 style={{ fontStyle: "italic", fontSize: "25px" }}>
+					Más de 30 años de experiencia nos avalan.
+				</h4>
+			</div>
+			<div>
+				<PasosLanding style={{ width: "100vw" }} />
+			</div>
 			<div style={{ height: "50vh", marginBottom: "2rem" }}>
 				<TextImg
 					img={Medico}
