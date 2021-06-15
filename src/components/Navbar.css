@@ -27,9 +27,10 @@
 
 .nav-menu {
 	display: flex;
+	flex-wrap: wrap;
 	list-style: none;
 	text-align: center;
-	width: 60vw;
+	width: 100%;
 	align-items: center;
 	justify-content: space-between;
 	margin-right: 2rem;
@@ -37,10 +38,14 @@
 }
 .nav-menu-mobile {
 	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: rgb(202, 232, 250);
+	height: 100%;
 	list-style: none;
 	text-align: center;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 
 .nav-item {

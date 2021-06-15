@@ -91,25 +91,30 @@ function Navbar() {
 
 	const handleClick = () => {
 		setClick(!click);
+		setOpen(false);
 	};
 	const closeMobileMenu = () => setClick(false);
 
 	if (isDesktop) {
 		return (
 			<div className="navbar">
-				<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+				<Link to="/" className="navbar-logo" onClick={() => setOpen(false)}>
 					<img src={logo} alt="CME-logo" style={{ height: 200, width: 200 }} />
 					<i className="fab fa-firstdraft" />
 				</Link>
-				<div>
-					<i className={"fas fa-bars"} />
-				</div>
+
 				<ul className={"nav-menu"}>
 					{headerElements.map((element, i) => (
 						<MenuItem el={element} key={i} handleClick={handleClick} />
 					))}
 				</ul>
-				<div>
+				<div
+					style={{
+						marginRight: "2rem",
+						width: "15%",
+						height: "60%",
+					}}
+				>
 					<Button text="Cita Previa" url={paths.Reservar.base} />
 				</div>
 			</div>
@@ -119,8 +124,8 @@ function Navbar() {
 			<div
 				style={{
 					display: "flex",
-					alignItems: "center",
 					justifyContent: "space-between",
+					alignItems: "center",
 					width: "100%",
 					height: "fit-content",
 				}}
@@ -141,36 +146,38 @@ function Navbar() {
 						/>
 					</Link>
 				</div>
-				<div>
-					<Address mobile />
-				</div>
+
+				<Address mobile />
+
 				<div
 					onClick={() => setOpen(!open)}
 					style={{
 						height: "5rem",
 						width: "3rem",
 						marginRight: "1rem",
-						color: "",
+						cursor: "pointer",
 					}}
 				>
 					<GiHamburgerMenu
 						style={{ height: "100%", width: "100%", color: matteBlue }}
 					/>
 				</div>
-				<div
-					style={{
-						position: "absolute",
-						width: "100%",
-						display: "flex",
-						justifyContent: "flex-end",
-						top: "6rem",
-					}}
-				>
-					<PhoneDropDown
-						headerElements={headerElements}
-						handleClick={handleClick}
-					/>
-				</div>
+				{open && (
+					<div
+						style={{
+							position: "absolute",
+							display: "flex",
+							top: "6rem",
+							width: "100%",
+							height: "100%",
+						}}
+					>
+						<PhoneDropDown
+							headerElements={headerElements}
+							handleClick={handleClick}
+						/>
+					</div>
+				)}
 			</div>
 		);
 	}

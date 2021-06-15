@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./MenuItem.css";
 import { Link } from "react-router-dom";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
+import { useIsMobile } from "../hooks/useMedia";
 
-export default function MenuItem({ el, activeTab, handleClick }) {
+export default function MenuItem({ el, handleClick, mobile }) {
 	const [displayDrop, setDisplayDrop] = useState("");
+	const isMobile = useIsMobile();
 	const handleDrop = name => {
 		if (!el.insideElements.length) handleClick();
 		if (displayDrop === name) {
@@ -15,7 +17,7 @@ export default function MenuItem({ el, activeTab, handleClick }) {
 		}
 	};
 	return (
-		<div onMouseLeave={() => setDisplayDrop("")}>
+		<div onMouseLeave={!isMobile ? () => setDisplayDrop("") : null}>
 			<li className="nav-item">
 				{!el.insideElements.length ? (
 					<Link
@@ -23,7 +25,7 @@ export default function MenuItem({ el, activeTab, handleClick }) {
 						className={"nav-links"}
 						onClick={() => handleDrop(el.name)}
 					>
-						<p>{el.name}</p>
+						<p style={{ fontSize: mobile ? "24px" : null }}>{el.name}</p>
 					</Link>
 				) : (
 					<div
@@ -32,7 +34,7 @@ export default function MenuItem({ el, activeTab, handleClick }) {
 						}
 						onClick={() => handleDrop(el.name)}
 					>
-						<p>{el.name}</p>
+						<p style={{ fontSize: mobile ? "24px" : null }}>{el.name}</p>
 						<p>
 							{" "}
 							{displayDrop === el.name ? (
@@ -48,7 +50,9 @@ export default function MenuItem({ el, activeTab, handleClick }) {
 				<div
 					style={
 						displayDrop === el.name
-							? styles.dropdownContainerActive
+							? isMobile
+								? styles.dropdownContainerActiveMobile
+								: styles.dropdownContainerActive
 							: styles.dropdownContainer
 					}
 				>
@@ -81,6 +85,12 @@ const styles = {
 		border: "1px solid lightgrey",
 		boxShadow: "1px 1px 1px lightgrey",
 		borderRadius: "2px",
+	},
+	dropdownContainerActiveMobile: {
+		display: "flex",
+		flexDirection: "column",
+		position: "relative",
+		width: "100vw",
 	},
 
 	icon: { marginTop: 8, marginLeft: 4 },
