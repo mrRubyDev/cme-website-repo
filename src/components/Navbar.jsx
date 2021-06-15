@@ -5,8 +5,13 @@ import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import MenuItem from "./MenuItem";
+import { useIsDesktop } from "../hooks/useMedia";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { matteBlue } from "../config/styles";
 
 function Navbar() {
+	const isDesktop = useIsDesktop();
+	const [open, setOpen] = useState(false);
 	const headerElements = [
 		{ name: "Inicio", path: paths.Landing, insideElements: [] },
 		{
@@ -87,25 +92,70 @@ function Navbar() {
 	};
 	const closeMobileMenu = () => setClick(false);
 
-	return (
-		<div className="navbar">
-			<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-				<img src={logo} alt="CME-logo" style={{ height: 200, width: 200 }} />
-				<i className="fab fa-firstdraft" />
-			</Link>
-			<div className="menu-icon">
-				<i className={"fas fa-bars"} />
+	console.log(open);
+	if (isDesktop) {
+		return (
+			<div className="navbar">
+				<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+					<img src={logo} alt="CME-logo" style={{ height: 200, width: 200 }} />
+					<i className="fab fa-firstdraft" />
+				</Link>
+				<div>
+					<i className={"fas fa-bars"} />
+				</div>
+				<ul className={"nav-menu"}>
+					{headerElements.map((element, i) => (
+						<MenuItem el={element} key={i} handleClick={handleClick} />
+					))}
+				</ul>
+				<div>
+					<Button text="Cita Previa" url={paths.Reservar.base} />
+				</div>
 			</div>
-			<ul className={"nav-menu"}>
-				{headerElements.map((element, i) => (
-					<MenuItem el={element} key={i} handleClick={handleClick} />
-				))}
-			</ul>
-			<div>
-				<Button text="Cita Previa" url={paths.Reservar.base} />
+		);
+	} else {
+		return (
+			<div
+				style={{
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "space-between",
+					width: "100%",
+					height: "6rem",
+				}}
+			>
+				<div
+					style={{
+						height: "6rem",
+						width: "6rem",
+						display: "flex",
+						justifyContent: "center",
+					}}
+				>
+					<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+						<img
+							src={logo}
+							alt="CME-logo"
+							style={{ height: "100%", width: "100%" }}
+						/>
+					</Link>
+				</div>
+				<div
+					onClick={() => setOpen(!open)}
+					style={{
+						height: "5rem",
+						width: "3rem",
+						marginRight: "1rem",
+						color: "",
+					}}
+				>
+					<GiHamburgerMenu
+						style={{ height: "100%", width: "100%", color: matteBlue }}
+					/>
+				</div>
 			</div>
-		</div>
-	);
+		);
+	}
 }
 
 export default Navbar;
