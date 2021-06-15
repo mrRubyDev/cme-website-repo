@@ -285,8 +285,7 @@ export default function TextImg({
 						display: "flex",
 						justifyContent: "center",
 						textAlign: "center",
-						height: "80vh",
-
+						margin: "2.2rem",
 						backgroundColor: color,
 					}}
 				>
