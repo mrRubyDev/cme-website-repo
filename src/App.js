@@ -12,10 +12,11 @@ import Address from "./components/Address";
 import { Especialidades } from "./components/screens/especialidades/index";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import paths from "./navigation/paths";
-import Covid from "./components/screens/servicios/Covid";
+import { useIsDesktop } from "./hooks/useMedia";
 import NotFound from "./components/screens/NotFound";
 
 function App() {
+	const isDesktop = useIsDesktop();
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -28,7 +29,7 @@ function App() {
 						}}
 					>
 						<Navbar />
-						<Address />
+						{isDesktop && <Address />}
 						<Switch>
 							<Route path="/" exact component={Landing} />
 							<Route path={paths.Landing} exact component={Landing} />

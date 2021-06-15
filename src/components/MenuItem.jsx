@@ -76,7 +76,7 @@ const styles = {
 		display: "flex",
 		flexDirection: "column",
 		position: "absolute",
-		width: "12vw",
+		width: "12rem",
 		backgroundColor: "white",
 		border: "1px solid lightgrey",
 		boxShadow: "1px 1px 1px lightgrey",

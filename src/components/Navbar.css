@@ -35,6 +35,13 @@
 	margin-right: 2rem;
 	margin-left: 10%;
 }
+.nav-menu-mobile {
+	display: flex;
+	list-style: none;
+	text-align: center;
+	align-items: center;
+	justify-content: space-between;
+}
 
 .nav-item {
 	display: flex;

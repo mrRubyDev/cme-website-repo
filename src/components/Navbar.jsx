@@ -5,9 +5,11 @@ import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import MenuItem from "./MenuItem";
+import Address from "./Address";
 import { useIsDesktop } from "../hooks/useMedia";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { matteBlue } from "../config/styles";
+import PhoneDropDown from "./PhoneDropDown";
 
 function Navbar() {
 	const isDesktop = useIsDesktop();
@@ -92,7 +94,6 @@ function Navbar() {
 	};
 	const closeMobileMenu = () => setClick(false);
 
-	console.log(open);
 	if (isDesktop) {
 		return (
 			<div className="navbar">
@@ -121,7 +122,7 @@ function Navbar() {
 					alignItems: "center",
 					justifyContent: "space-between",
 					width: "100%",
-					height: "6rem",
+					height: "fit-content",
 				}}
 			>
 				<div
@@ -140,6 +141,9 @@ function Navbar() {
 						/>
 					</Link>
 				</div>
+				<div>
+					<Address mobile />
+				</div>
 				<div
 					onClick={() => setOpen(!open)}
 					style={{
@@ -151,6 +155,20 @@ function Navbar() {
 				>
 					<GiHamburgerMenu
 						style={{ height: "100%", width: "100%", color: matteBlue }}
+					/>
+				</div>
+				<div
+					style={{
+						position: "absolute",
+						width: "100%",
+						display: "flex",
+						justifyContent: "flex-end",
+						top: "6rem",
+					}}
+				>
+					<PhoneDropDown
+						headerElements={headerElements}
+						handleClick={handleClick}
 					/>
 				</div>
 			</div>

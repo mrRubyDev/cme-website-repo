@@ -9,6 +9,8 @@
 	border: none;
 	font-size: 18px;
 	color: #fff;
+	height: 100%;
+	width: 100%;
 	cursor: pointer;
 	background-color: var(--primary);
 }
