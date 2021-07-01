@@ -21,6 +21,7 @@ export default function TextImg({
 	buttonUrl,
 	img,
 	centered,
+	mobile,
 	noTicks,
 }) {
 	const isDesktop = useIsDesktop();
@@ -281,12 +282,81 @@ export default function TextImg({
 			{centered && (
 				<div
 					style={{
-						width: "70%",
+						width: "90%",
 						display: "flex",
 						justifyContent: "center",
 						textAlign: "center",
-						margin: "2.2rem",
+						margin: isDesktop ? "2.2rem" : "0rem",
 						backgroundColor: color,
+					}}
+				>
+					<div
+						style={{
+							width: "90%",
+							display: "flex",
+							flexDirection: "column",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+					>
+						<h4
+							style={{
+								color: "lightskyblue",
+							}}
+						>
+							{header}
+						</h4>
+						<h2
+							style={{
+								color: darkBlue,
+								fontSize: 28,
+								marginTop: ".5rem",
+								marginBottom: "1rem",
+							}}
+						>
+							{title}
+						</h2>
+
+						<p style={blueParagraphStyleLeft}> {paragraph}</p>
+
+						<div
+							style={{
+								display: "flex",
+								flexDirection: "column",
+								marginTop: "2rem",
+								alignItems: "center",
+							}}
+						>
+							{!noTicks && (
+								<>
+									<IconText
+										text={line1}
+										icon={<TiTick style={styles.icon} />}
+									/>
+									<IconText
+										text={line2}
+										icon={<TiTick style={styles.icon} />}
+									/>
+								</>
+							)}
+							{button ? (
+								<div style={{ marginTop: "2rem" }}>
+									<Button text={button} url={buttonUrl} />
+								</div>
+							) : null}
+						</div>
+					</div>
+				</div>
+			)}
+			{mobile && !img && centered && (
+				<div
+					style={{
+						width: "90%",
+						display: "flex",
+						flexDirection: "column",
+						justifyContent: "center",
+						textAlign: "center",
+						backgroundColor: "red",
 					}}
 				>
 					<div

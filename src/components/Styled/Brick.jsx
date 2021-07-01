@@ -7,7 +7,8 @@ export default function Brick({ color, children }) {
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",
-				height: "50vh",
+				marginTop: 10,
+				height: "100%",
 				width: "100%",
 				backgroundColor: color,
 			}}
