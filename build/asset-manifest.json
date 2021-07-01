@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/cme-website-repo/static/css/main.3ff9aecc.chunk.css",
+    "main.js": "/cme-website-repo/static/js/main.fc588480.chunk.js",
+    "main.js.map": "/cme-website-repo/static/js/main.fc588480.chunk.js.map",
+    "runtime-main.js": "/cme-website-repo/static/js/runtime-main.3ac67884.js",
+    "runtime-main.js.map": "/cme-website-repo/static/js/runtime-main.3ac67884.js.map",
+    "static/js/2.a4fc49cc.chunk.js": "/cme-website-repo/static/js/2.a4fc49cc.chunk.js",
+    "static/js/2.a4fc49cc.chunk.js.map": "/cme-website-repo/static/js/2.a4fc49cc.chunk.js.map",
+    "static/js/3.55e5594a.chunk.js": "/cme-website-repo/static/js/3.55e5594a.chunk.js",
+    "static/js/3.55e5594a.chunk.js.map": "/cme-website-repo/static/js/3.55e5594a.chunk.js.map",
+    "index.html": "/cme-website-repo/index.html",
+    "static/css/main.3ff9aecc.chunk.css.map": "/cme-website-repo/static/css/main.3ff9aecc.chunk.css.map",
+    "static/js/2.a4fc49cc.chunk.js.LICENSE.txt": "/cme-website-repo/static/js/2.a4fc49cc.chunk.js.LICENSE.txt",
+    "static/media/covid-banner.8084212c.png": "/cme-website-repo/static/media/covid-banner.8084212c.png",
+    "static/media/doctor-woman.831409d4.jpeg": "/cme-website-repo/static/media/doctor-woman.831409d4.jpeg",
+    "static/media/logo-no-bck.7326775c.png": "/cme-website-repo/static/media/logo-no-bck.7326775c.png",
+    "static/media/pcr.18269735.jpeg": "/cme-website-repo/static/media/pcr.18269735.jpeg",
+    "static/media/puerta.e4b9269e.jpeg": "/cme-website-repo/static/media/puerta.e4b9269e.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ac67884.js",
+    "static/js/2.a4fc49cc.chunk.js",
+    "static/css/main.3ff9aecc.chunk.css",
+    "static/js/main.fc588480.chunk.js"
+  ]
+}
