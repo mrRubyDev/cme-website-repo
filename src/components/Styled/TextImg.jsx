@@ -286,6 +286,7 @@ export default function TextImg({
 						display: "flex",
 						justifyContent: "center",
 						textAlign: "center",
+						padding: "1rem 0 1rem 0",
 						margin: isDesktop ? "2.2rem" : "0rem",
 						backgroundColor: color,
 					}}

@@ -10,10 +10,11 @@ export default function Footer() {
 	return (
 		<div
 			style={{
-				height: "20vh",
+				height: isMobile ? "25vh" : "20vh",
 				width: "100vw",
 				borderTop: "1px solid lightgrey",
 				display: "flex",
+				fontSize: isMobile ? 15 : null,
 				alignItems: "center",
 				justifyContent: "center",
 			}}
@@ -21,10 +22,12 @@ export default function Footer() {
 			<div
 				style={{
 					display: "flex",
-					justifyContent: "space-between",
+					justifyContent: isMobile ? "space-evenly" : "space-between",
 					alignItems: "flex-start",
 					height: "80%",
 					marginTop: "2%",
+					width: "100vw",
+					marginLeftl: isMobile ? 5 : null,
 				}}
 			>
 				<div
@@ -35,7 +38,7 @@ export default function Footer() {
 						width: isMobile ? "20%" : null,
 					}}
 				>
-					<h4 style={{ marginBottom: "1rem" }}>Preguntas Frecuentes</h4>
+					<h4 style={{ marginBottom: "1rem" }}>Frecuentes</h4>
 					<Link className="nav-links-footer" to={paths.AboutUs}>
 						Nosotros
 					</Link>
@@ -79,7 +82,7 @@ export default function Footer() {
 						display: "flex",
 						flexDirection: "column",
 						margin: !isMobile ? "0px 50px 0px" : null,
-						width: isMobile ? "30%" : null,
+						width: isMobile ? "33%" : null,
 					}}
 				>
 					<h4 style={{ marginBottom: "1rem" }}>Legal</h4>

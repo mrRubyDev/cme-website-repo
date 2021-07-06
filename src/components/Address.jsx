@@ -26,16 +26,20 @@ export default function Address({ mobile }) {
 			<div
 				style={{
 					display: "flex",
-					flexDirection: "row",
+					flexDirection: "column",
 					justifyContent: "center",
 					alignItems: "center",
-					width: "100%",
+					width: "80%",
 					height: "5rem",
 					color: darkBlue,
+					border: "solid 1px",
+					marginTop: 20,
+					position: "absolute",
+					bottom: "20%",
 				}}
 			>
-				<p style={{ fontSize: "14px" }}>Tel: 091866209</p>
-				<p style={{ marginLeft: 20, fontSize: "14px" }}>
+				<p style={{ fontSize: "20px" }}>Tel: 091866209</p>
+				<p style={{ fontSize: "20px", marginTop: 10 }}>
 					L-V: 8 a 20 hs. S: 8 a 12:30
 				</p>
 			</div>

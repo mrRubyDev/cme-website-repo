@@ -4,6 +4,7 @@ import MenuItem from "./MenuItem";
 import { Button } from "./Button";
 import paths from "../navigation/paths";
 import { useIsTablet } from "../hooks/useMedia";
+import Address from "./Address";
 
 export default function PhoneDropDown({ headerElements, handleClick }) {
 	const isTablet = useIsTablet();
@@ -31,10 +32,14 @@ export default function PhoneDropDown({ headerElements, handleClick }) {
 					{headerElements.map(
 						(element, i) =>
 							element.name !== "Inicio" && (
-								<MenuItem el={element} key={i} handleClick={handleClick} />
+								<MenuItem
+									el={element}
+									key={i}
+									handleClick={() => handleClick()}
+								/>
 							)
 					)}
-					<div style={{ width: "8rem" }}>
+					<div style={{ width: "8rem" }} onClick={() => handleClick()}>
 						<Button text="Cita Previa" url={paths.Reservar.base} navbar />
 					</div>
 				</div>
@@ -50,9 +55,14 @@ export default function PhoneDropDown({ headerElements, handleClick }) {
 						)
 				)}
 			</div>
-			<div style={{ width: "10rem", marginTop: 20 }}>
+			<div
+				style={{ width: "10rem", marginTop: 20 }}
+				onClick={() => handleClick()}
+			>
 				<Button text="Cita Previa" url={paths.Reservar.base} />
 			</div>
+
+			<Address mobile />
 		</ul>
 	);
 }

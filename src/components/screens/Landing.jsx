@@ -39,7 +39,12 @@ export default function Landing() {
 			</div>
 			{isDesktop && (
 				<>
-					<div style={{ height: "50vh", marginBottom: "2rem" }}>
+					<div
+						style={{
+							height: isMobile ? "100vh" : "50vh",
+							marginBottom: "2rem",
+						}}
+					>
 						<TextImg
 							img={Medico}
 							header="ENCUENTRE EL SERVICIO QUE NECESITA"
