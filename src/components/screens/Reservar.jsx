@@ -6,11 +6,7 @@ import { useIsDesktop, useIsTablet } from "../../hooks/useMedia";
 export default function Reservar() {
 	const isDesktop = useIsDesktop();
 	const isTablet = useIsTablet();
-	const {
-		register,
-		handleSubmit,
-		formState: {},
-	} = useForm();
+	const { register, handleSubmit } = useForm();
 	const onSubmit = data => console.log(data);
 	const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
 	return (

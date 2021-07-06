@@ -6,7 +6,7 @@ import Medico from "../../images/doctor-woman.jpeg";
 import { rose } from "../../config/styles";
 import Footer from "../Footer";
 import paths from "../../navigation/paths";
-import { useIsMobile, useIsTablet, useIsDesktop } from "../../hooks/useMedia";
+import { useIsMobile, useIsDesktop } from "../../hooks/useMedia";
 
 export default function Landing() {
 	const isMobile = useIsMobile();

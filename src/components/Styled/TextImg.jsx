@@ -94,7 +94,7 @@ export default function TextImg({
 					<div style={{ width: "30%", marginLeft: "8rem" }}>
 						<img
 							src={img}
-							alt="Component picture"
+							alt="User chosen"
 							style={{ height: "65%", borderRadius: "15%" }}
 						/>
 					</div>
@@ -164,7 +164,7 @@ export default function TextImg({
 					<div style={{ width: "35%", marginRight: "8rem" }}>
 						<img
 							src={img}
-							alt="Component picture"
+							alt="User chosen"
 							style={{ height: "65%", borderRadius: "5%" }}
 						/>
 					</div>
