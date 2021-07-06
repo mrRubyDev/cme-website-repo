@@ -7,11 +7,9 @@ import { rose } from "../../config/styles";
 import Footer from "../Footer";
 import paths from "../../navigation/paths";
 import { useIsMobile, useIsTablet, useIsDesktop } from "../../hooks/useMedia";
-import Brick from "../Styled/Brick";
 
 export default function Landing() {
 	const isMobile = useIsMobile();
-	const isTablet = useIsTablet();
 	const isDesktop = useIsDesktop();
 	return (
 		<div

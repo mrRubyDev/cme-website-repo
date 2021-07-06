@@ -2,10 +2,9 @@ import React from "react";
 import Logo from "../logo-no-bck.png";
 import paths from "../navigation/paths";
 import { Link } from "react-router-dom";
-import { useIsDesktop, useIsMobile, useIsTablet } from "../hooks/useMedia";
+import { useIsMobile, useIsTablet } from "../hooks/useMedia";
 
 export default function Footer() {
-	const isDesktop = useIsDesktop();
 	const isMobile = useIsMobile();
 	const isTablet = useIsTablet();
 	return (

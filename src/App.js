@@ -3,7 +3,6 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Landing from "./components/screens/Landing";
 import Reservar from "./components/screens/Reservar";
-import AboutUs from "./components/screens/AboutUs";
 import Tarifas from "./components/screens/Tarifas";
 import { Empresas } from "./components/screens/empresas/index";
 import { Servicios } from "./components/screens/servicios/index";

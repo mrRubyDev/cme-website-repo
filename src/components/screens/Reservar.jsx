@@ -9,8 +9,7 @@ export default function Reservar() {
 	const {
 		register,
 		handleSubmit,
-		watch,
-		formState: { errors },
+		formState: {},
 	} = useForm();
 	const onSubmit = data => console.log(data);
 	const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
@@ -167,7 +166,6 @@ const styles = {
 		boxSizing: "border-box",
 	},
 	inputObser: {
-		marginBottom: "1.2rem",
 		padding: "0 0.5rem",
 		marginBottom: "3rem",
 		width: "100%",

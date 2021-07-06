@@ -1,5 +1,5 @@
 import React from "react";
-import { darkBlue, matteBlue } from "../config/styles";
+import { darkBlue } from "../config/styles";
 
 export default function Address({ mobile }) {
 	if (!mobile)
