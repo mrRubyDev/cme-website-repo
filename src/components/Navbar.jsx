@@ -5,7 +5,6 @@ import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import MenuItem from "./MenuItem";
-import Address from "./Address";
 import { useIsDesktop, useIsMobile } from "../hooks/useMedia";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { matteBlue } from "../config/styles";
@@ -88,7 +87,6 @@ function Navbar() {
 		{ name: "Tarifas", path: paths.Tarifas, insideElements: [] },
 	];
 	const [click, setClick] = useState(false);
-	const isMobile = useIsMobile();
 
 	const handleClick = () => {
 		setClick(!click);
