@@ -26,7 +26,7 @@ export default function Footer() {
 					alignItems: "flex-start",
 					height: "80%",
 					marginTop: "2%",
-					width: "100vw",
+					width: isMobile ? "100vw" : "80%",
 					marginLeftl: isMobile ? 5 : null,
 				}}
 			>
@@ -112,7 +112,7 @@ export default function Footer() {
 					</Link>
 				</div>
 				{!isMobile && !isTablet && (
-					<div style={{ height: "80%", width: "10%", marginLeft: "2rem" }}>
+					<div style={{ height: "80%", width: "10%", marginRight: "5rem" }}>
 						<img
 							src={Logo}
 							alt="CME"
